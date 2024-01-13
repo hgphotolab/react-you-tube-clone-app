@@ -20,9 +20,9 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 const Container = styled.div`
 flex: 1;
-background-color: #202020;
+background-color: ${({theme})=>theme.bgLighter};
 height: 100vh;
-color: white;
+color: ${({theme})=>theme.text};
 font-size : 14px;
 position: sticky;
 top : 0;
@@ -52,11 +52,12 @@ const Items = styled.div`
   gap: 5px;
   cursor: pointer;
   padding: 7.5px 0px;
+  
 `;
 
 const Hr = styled.hr`
 margin : 15px 0px;
-border : 0.5px solid #373737`;
+border : 0.5px solid ${({theme})=>theme.soft}`;
 
 const Login = styled.div``;
 
@@ -71,9 +72,17 @@ margin-top : 10px;
 cursor: pointer;
 display: flex;
 gap: 5px;
-align-items: center;`;
+align-items: center;
+`;
 
-const Menu = () => {
+const Title = styled.div`
+font-size: 12px;
+font-weight: 500;
+color: #aaaaaa;
+margin-bottom: 20px;
+`;
+
+const Menu = ({darkMode, setDarkMode}) => {
   return (
     <Container>
       <Wrapper>
@@ -109,6 +118,7 @@ const Menu = () => {
         <Button><LockOpenIcon/>SIGN IN</Button>
         </Login>
         <Hr/>
+        <Title>LATEST VIDEOS</Title>
         <Items>
         <LibraryMusicIcon/>
         Music
@@ -146,7 +156,7 @@ const Menu = () => {
         <HelpIcon/>
         Help
         </Items>
-        <Items>
+        <Items onClick={()=> setDarkMode(!darkMode)}>
         <LightModeIcon/>
         Light Mode
         </Items>
