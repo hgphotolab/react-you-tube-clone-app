@@ -16,6 +16,7 @@ import ReportIcon from '@mui/icons-material/Report';
 import HelpIcon from '@mui/icons-material/Help';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import { Link } from 'react-router-dom';
 
 
 const Container = styled.div`
@@ -86,10 +87,12 @@ const Menu = ({darkMode, setDarkMode}) => {
   return (
     <Container>
       <Wrapper>
+      <Link to="/" style={{textDecoration: "none", color :'inherit'}}>
         <Logo>
         <Img src={HGTube}/>
         HG Tube
         </Logo>
+        </Link>
         <Items>
         <HomeIcon/>
         Home
@@ -158,7 +161,7 @@ const Menu = ({darkMode, setDarkMode}) => {
         </Items>
         <Items onClick={()=> setDarkMode(!darkMode)}>
         <LightModeIcon/>
-        Light Mode
+        {darkMode? "Light" : "Dark"} Mode
         </Items>
       </Wrapper>
     </Container>
