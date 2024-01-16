@@ -40,21 +40,22 @@ font-size: 14px;
 color: ${({theme})=>theme.textSoft};`;
 
 const ChannelImage = styled.img`
+margin-top: 15px;
 width: 36px;
 height: 36px;
 border-radius : 50%;
 background-color: #999;
 `;
 
-const Card = () => {
+const Card = ({type}) => {
   return (
     <Link to="video/test" style={{textDecoration: "none"}}>
-    <Container>
-      <Image src='https://img-cdn.thepublive.com/fit-in/1280x960/filters:format(webp)/ptc-news/media/media_files/HNgmP0ywpJZUL6W0Ke1B.jpg'/>
-      <Details>
+    <Container type={type}>
+      <Image type={type} src='https://img-cdn.thepublive.com/fit-in/1280x960/filters:format(webp)/ptc-news/media/media_files/HNgmP0ywpJZUL6W0Ke1B.jpg'/>
+      <Details type={type}>
         <ChannelImage src={Profile} />
         <Texts>
-          <Title></Title>
+          <Title>Boycott Maldives LIVE Updates : मुइज्जू की पत्नी निकली आतंकी की बहन? | India | PM Modi | Muizzu News</Title>
           <ChannelName>HG Tube</ChannelName>
           <Info>980,809 views . 7 Days ago</Info>
         </Texts>

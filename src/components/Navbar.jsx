@@ -37,7 +37,11 @@ border-radius: 20px;
 
 const Input = styled.input`
 border: none;
-background-color: transparent;`;
+background-color: transparent;
+width: 100%;
+outline: none;
+color : ${({theme})=>theme.text};
+`;
 
 const Button = styled.button`
 padding: 5px 15px;
