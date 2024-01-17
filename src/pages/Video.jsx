@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import ProfileCh from "./../img/Channel.jpg";
 import Comments from '../components/Comments';
-//import Card from "./../components/Card";
+import Card from "./../components/Card";
 
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import ThumbDownOffAltOutlinedIcon from '@mui/icons-material/ThumbDownOffAltOutlined';
@@ -119,11 +119,11 @@ const Video = () => {
         <iframe 
         width="853" 
         height="480" 
-        src="https://www.youtube.com/embed/FK93HOgub-k" 
-        title="Boycott Maldives LIVE Updates : मुइज्जू की पत्नी निकली आतंकी की बहन? | India | PM Modi | Muizzu News" 
+        src="https://www.youtube.com/embed/ksmJq_SZUwY" 
+        title="India Maldives Row : भारत-मालदीव विवाद की पीछे कौन? China या Pakistan? Lakshadweep | PM Modi | N18V" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowFullscreen>
+        allowfullscreen>
         </iframe>
 
         </VideoWrapper>
@@ -166,7 +166,25 @@ const Video = () => {
         <Comments/>
       </Content>
       <Recomendation>
-        Recomendations
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
+        <Card type = "sm"/>
       </Recomendation>
     </Container>
   )

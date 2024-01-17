@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
 position: sticky;
@@ -64,7 +65,7 @@ const Navbar = () => {
           <Input placeholder='Search'/>
           <SearchOutlinedIcon/>
         </Search>
-        <Button><LockOpenIcon/>SIGN IN</Button>
+        <Link to="signin" style={{textDecoration:"none"}}><Button><LockOpenIcon/>SIGN IN</Button></Link>
       </Warapper>
     </Container>
   )

@@ -53,6 +53,9 @@ const Items = styled.div`
   gap: 5px;
   cursor: pointer;
   padding: 7.5px 0px;
+  &:hover{
+    background-color : ${({theme})=>theme.soft};
+  }
   
 `;
 
@@ -118,7 +121,8 @@ const Menu = ({darkMode, setDarkMode}) => {
         <Hr/>
         <Login>
         Sign In to like videos, comment and subscribe.
-        <Button><LockOpenIcon/>SIGN IN</Button>
+        <Link to = "signin" style={{textDecoration:"none"}}><Button><LockOpenIcon/>SIGN IN</Button></Link>
+        
         </Login>
         <Hr/>
         <Title>LATEST VIDEOS</Title>
